@@ -1,0 +1,33 @@
+//очередь
+type Queue []int
+
+//инициализация очереди
+func initQueue(size int) Queue {
+	return make(Queue, 0, size)
+}
+
+//добавление элемента в очереди
+func (q *Queue) push(a int) {
+	*q = append(*q, a)
+}
+
+//удаление элемента из очереди
+func (q *Queue) pop() (res int) {
+	res = (*q)[0]
+	*q = (*q)[1:]
+	return
+}
+
+//пуста ли очередь?
+func (q *Queue) isEmpty() bool {
+	return len(*q) == 0
+}
+
+//полуение строки информации об этом очереди
+func (q *Queue) toString() (res string) {
+	res = "Очередь:\n"
+	for _, val := range *q {
+		res += string(val + int('0')) + "  "
+	}
+	return
+}

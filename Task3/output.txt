@@ -1,0 +1,5 @@
+digraph {
+  A [label = "A(10)", color = red]
+  B [label = "B(20)", color = red]
+  A -> B [color = red]
+}

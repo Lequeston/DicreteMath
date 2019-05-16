@@ -1,0 +1,12 @@
+Think(10) <
+Work(8) <
+Rest(2);
+Work <
+Win(100);
+Rest <
+Work;
+Think <
+Eat(2) <
+Drink(3);
+Think <
+Mourn(24)

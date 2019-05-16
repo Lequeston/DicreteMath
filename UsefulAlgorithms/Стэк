@@ -1,0 +1,33 @@
+//стэк
+type Stack []int
+
+//инициализация стэка
+func initStack(size int) Stack {
+	return make(Stack, 0, size)
+}
+
+//добавление элемента в стэк
+func (st *Stack) push(value int) {
+	*st = append(*st, value)
+}
+
+//удаление элемента из стэка
+func (st *Stack) pop() (value int) {
+	value = (*st)[len(*st)-1]
+	*st = (*st)[:len(*st)-1]
+	return
+}
+
+//пуст ли стэк?
+func (st *Stack) isEmpty() bool {
+	return len(*st) == 0
+}
+
+//полуение строки информации об этом стэке
+func (st *Stack) toString() (str string) {
+	str = "Стэк:\n"
+	for _, val := range *st {
+		str += string(val + int('0')) + " "
+	}
+	return
+}
